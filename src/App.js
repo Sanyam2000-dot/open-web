@@ -1,4 +1,5 @@
-import "./App.css";
+// import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Homepage from "./Homepage/index";
 import ContactUs from "./contactus/ContactUs";
 import AboutUs from "./aboutus/AboutUs";
