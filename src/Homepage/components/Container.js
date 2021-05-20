@@ -1,12 +1,20 @@
 import React from "react";
-import styled from "styled-components";
-// import "../../App.css"
+import ParticlesBg from "particles-bg";
+import CarouselIndex from "./CarouselIndex";
 
-const StyledBanner = styled.div`
-  width: auto;
-`;
+// let config = {
+//   type: "circle",
+//   color: "#a0cc3a",
+//   radius: [5, 100],
+// };
+
 const Container = () => {
-  return <StyledBanner></StyledBanner>;
+  return (
+    <div>
+      <CarouselIndex />
+      <ParticlesBg color="#a0cc3a" type="fountain" bg={true} />
+    </div>
+  );
 };
 
 export default Container;

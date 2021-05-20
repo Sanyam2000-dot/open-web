@@ -2,22 +2,18 @@ import React from "react";
 import educate from "../images/educate.png";
 import contribute from "../images/contribute.png";
 import adopt from "../images/adopt.png";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
+
 const AboutUs = () => {
   return (
     <main className="page-about">
       <div className="container">
         <section className="page-header">
           <h1>About Us</h1>
-          <nav aria-label="breadcrumb">
-            <ol className="breadcrumb open-breadcrumb">
-              <li className="breadcrumb-item">
-                <a href="/">Home</a>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                About Us
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>About Us</Breadcrumb.Item>
+          </Breadcrumb>
         </section>
         <section className="open-page-section pt-0">
           <div className="row">

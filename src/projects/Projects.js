@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../spinner/spinner";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 const Projects = () => {
   const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ const Projects = () => {
     setData(fetchData);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
   };
 
   useEffect(() => {
@@ -30,16 +31,10 @@ const Projects = () => {
       <div className="container">
         <section className="page-header">
           <h1>Projects</h1>
-          <nav aria-label="breadcrumb">
-            <ol className="breadcrumb open-breadcrumb">
-              <li className="breadcrumb-item">
-                <a href="/">Home</a>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                Projects
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>Projects</Breadcrumb.Item>
+          </Breadcrumb>
         </section>
         <section className="py-5 mb-5">
           <div className="container">

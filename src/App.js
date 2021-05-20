@@ -1,17 +1,20 @@
 // import "./App.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Homepage from "./Homepage/index";
 import ContactUs from "./contactus/ContactUs";
 import AboutUs from "./aboutus/AboutUs";
 import Projects from "./projects/Projects";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Homepage}></Route>
+        <Route exact path="/">
+          <Homepage user={user} setUser={setUser} />
+        </Route>
       </Switch>
       <Switch>
         <Route exact path="/contact" component={ContactUs}></Route>
