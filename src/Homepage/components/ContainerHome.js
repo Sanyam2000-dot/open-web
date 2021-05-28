@@ -8,13 +8,13 @@ import CarouselIndex from "./CarouselIndex";
 //   radius: [5, 100],
 // };
 
-const Container = () => {
+const ContainerHome = () => {
   return (
     <div>
       <CarouselIndex />
-      <ParticlesBg color="#a0cc3a" type="fountain" bg={true} />
+      <ParticlesBg color="#a0cc3a" type="colors" bg={true} />
     </div>
   );
 };
 
-export default Container;
+export default ContainerHome;
