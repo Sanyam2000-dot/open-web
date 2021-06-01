@@ -8,6 +8,7 @@ import linkedin from "../../images/icons/linkedin.svg";
 import youtube from "../../images/icons/youtube.svg";
 import twitter from "../../images/icons/twitter.svg";
 import footer from "../../images/footer.png";
+import { SocialIcon } from "react-social-icons";
 // import "../.././App.css";
 
 const FooterComponent = () => {
@@ -17,6 +18,11 @@ const FooterComponent = () => {
         <div className="row footer-content">
           <div className="col-xl-6 col-lg-7 col-md-8 mb-2">
             <h2 className="mb-0 ">Want to contribute to Open Source?</h2>
+          </div>
+          <div class="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
+            <a href="register.html" class="btn btn-primary btn-lg">
+              Register Now
+            </a>
           </div>
         </div>
         <hr></hr>
@@ -34,40 +40,40 @@ const FooterComponent = () => {
             <nav>
               <ul className="nav flex-column">
                 <li className="nav-item active">
-                  <a className="nav-link" href="index.html">
+                  <a className="nav-link" href="/">
                     Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="aboutus.html">
+                  <a className="nav-link" href="/about">
                     About Us
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="contactus.html">
+                  <a className="nav-link" href="/contact">
                     Contact Us
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="projects.html">
+                  <a className="nav-link" href="/projects">
                     Projects
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="gallery.html" className="nav-link">
+                  <a href="#gallery" className="nav-link">
                     Gallery
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="register.html" className="nav-link">
+                  <a href="/register" className="nav-link">
                     Register
                   </a>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a href="login.html" className="nav-link">
                     Login
                   </a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
@@ -84,10 +90,30 @@ const FooterComponent = () => {
               <script>document.write(new Date().getFullYear())</script>
             </p>
             <nav className="social-menu">
-              <a className="p-1" href="https://www.facebook.com/upesopen/">
+              {/* <a className="p-1" href="https://www.facebook.com/upesopen/">
                 <img src={facebook} alt="facebook" />
-              </a>
-              <a className="p-1" href="https://www.instagram.com/upesopen_/">
+              </a> */}
+              <SocialIcon
+                style={{ height: 40, width: 40, marginRight: "4px" }}
+                url="https://www.facebook.com/upesopen/"
+              />
+              <SocialIcon
+                style={{ height: 40, width: 40, marginRight: "4px" }}
+                url="https://www.instagram.com/upesopen_/"
+              />
+              <SocialIcon
+                style={{ height: 40, width: 40, marginRight: "4px" }}
+                url="https://in.linkedin.com/company/open-community"
+              />
+              <SocialIcon
+                style={{ height: 40, width: 40, marginRight: "4px" }}
+                url="https://twitter.com/upesopen"
+              />
+              <SocialIcon
+                style={{ height: 40, width: 40 }}
+                url="https://www.youtube.com/channel/UCxdpyRSNdAKQ6R6Jpv_-nKQ/featured"
+              />
+              {/* <a className="p-1" href="https://www.instagram.com/upesopen_/">
                 <img src={instagram} alt="instagram" />
               </a>
               <a
@@ -104,7 +130,7 @@ const FooterComponent = () => {
                 href="https://www.youtube.com/channel/UCxdpyRSNdAKQ6R6Jpv_-nKQ/featured"
               >
                 <img src={youtube} alt="youtube" />
-              </a>
+              </a> */}
             </nav>
           </div>
         </div>

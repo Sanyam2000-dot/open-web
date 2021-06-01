@@ -7,6 +7,7 @@ import Projects from "./projects/Projects";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import Register from "./register/Register";
+import { Team } from "./team/Team";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,6 +29,9 @@ function App() {
       </Switch>
       <Switch>
         <Route exact path="/register" component={Register}></Route>
+      </Switch>
+      <Switch>
+        <Route exact path="/team" component={Team}></Route>
       </Switch>
       {/* <Switch>
         <Redirect to="/"></Redirect>

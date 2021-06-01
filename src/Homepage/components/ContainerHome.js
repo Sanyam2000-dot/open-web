@@ -12,7 +12,7 @@ const ContainerHome = () => {
   return (
     <div>
       <CarouselIndex />
-      <ParticlesBg color="#a0cc3a" type="colors" bg={true} />
+      {/* <ParticlesBg color="#a0cc3a" type="fountain" bg={true} />s */}
     </div>
   );
 };

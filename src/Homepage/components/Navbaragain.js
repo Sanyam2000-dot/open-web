@@ -16,6 +16,7 @@ import ContainerHome from "./ContainerHome";
 import Sponsors from "./Sponsors";
 import FooterComponent from "./FooterComponent";
 import logo from "../../assets/icons/logo.png";
+import EventsCarousel from "./EventsCarousel";
 // import classes from "*.module.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,10 +39,20 @@ const useStyles = makeStyles((theme) => ({
       color: "#BA6504",
     },
   },
+  registerBtnStyle: {
+    width: "150px",
+    height: "40px",
+    paddingLeft: "1rem",
+    "&:hover": {
+      backgroundColor: "#A3CB37",
+      color: "white",
+    },
+  },
 }));
 const teamBtnStyle = {
   borderRight: "0",
 };
+
 // A9E1F5
 
 function ScrollTop(props) {
@@ -154,11 +165,7 @@ export default function BackToTop(props) {
             }}
           >
             <Button
-              style={{
-                width: "150px",
-                height: "40px",
-                paddingLeft: "1rem",
-              }}
+              className={classes.registerBtnStyle}
               variant="contained"
               color="primary"
               href="/register"
@@ -172,6 +179,7 @@ export default function BackToTop(props) {
       <Container>
         <ContainerHome />
         <Sponsors />
+        <EventsCarousel />
         <FooterComponent />
       </Container>
       <ScrollTop {...props}>
